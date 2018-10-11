@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GEInfoSlatePrivacy
   m_Shader: {fileID: 4800000, guid: f9f286dfc38c48340afa8f939b7b3007, type: 3}

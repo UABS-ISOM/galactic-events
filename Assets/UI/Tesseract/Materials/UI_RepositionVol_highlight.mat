@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: UI_RepositionVol_highlight
   m_Shader: {fileID: 4800000, guid: 122d95c8320c7ab4780c6fa077bc95b1, type: 3}
