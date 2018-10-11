@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Saturn
   m_Shader: {fileID: 4800000, guid: 09a5a8d7ddc67874ab6f6b858facea59, type: 3}
@@ -113,14 +113,14 @@ Material:
     - _EmissiveMultiplier: 1
     - _FOG: 0
     - _Glossiness: 0.5
-    - _InnerRingRadius: 0.0175
+    - _InnerRingRadius: 0.017500028
     - _LightProbeAmount: 1
     - _Metallic: 0
     - _Mode: 0
     - _NormalAlphaAsEmissive: 0
     - _NormalAlphaAsSpecular: 0
     - _OcclusionStrength: 1
-    - _OuterRingRadius: 0.025
+    - _OuterRingRadius: 0.02500004
     - _Parallax: 0.02
     - _SRCBLEND: 5
     - _ShowDebugValue: 0

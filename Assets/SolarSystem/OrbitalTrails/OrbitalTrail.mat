@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: OrbitalTrail
   m_Shader: {fileID: 4800000, guid: 5fe39b08e807cfa45b3cfe98eae4a91b, type: 3}

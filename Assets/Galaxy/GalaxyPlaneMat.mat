@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GalaxyPlaneMat
   m_Shader: {fileID: 4800000, guid: 94c9d618f00206e45aee7537d36833c6, type: 3}
