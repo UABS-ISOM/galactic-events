@@ -1,0 +1,70 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+Bin/
+UnityGenerated/
+Library/
+Packages/
+Assets/AssetStoreTools*
+project.json
+project.lock.json
+UnityPackageManager/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+.vs/
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.csproj
+*.pidb
+*.suo
+/*.sln
+*.sln
+*.user
+*.unityproj
+*.ipch
+*.opensdf
+*.sdf
+*.obj
+*.tlog
+*.log
+*.idb
+*.opendb
+WSATestCertificate.pfx
+WSATestCertificate.pfx.meta
+
+# ============================================= #
+# Exceptions to above rules for Galaxy Explorer #
+# ============================================= #
+UWP/*
+!UWP/UnityOverwrite.txt
+!UWP/Galaxy Explorer.sln
+!UWP/project.json
+
+!UWP/Galaxy Explorer/
+UWP/Galaxy Explorer/*
+!UWP/Galaxy Explorer/App.xaml
+!UWP/Galaxy Explorer/App.xaml.cs
+!UWP/Galaxy Explorer/Galaxy Explorer.csproj
+!UWP/Galaxy Explorer/XamlInputHandling.cs
+!UWP/Galaxy Explorer/MainPage.xaml
+!UWP/Galaxy Explorer/MainPage.xaml.cs
+!UWP/Galaxy Explorer/Package.appxmanifest
+!UWP/Galaxy Explorer/project.json
+
+!UWP/Galaxy Explorer/Properties/
+UWP/Galaxy Explorer/Properties/*
+!UWP/Galaxy Explorer/Properties/AssemblyInfo.cs
+
+!UWP/Galaxy Explorer/Assets/
+UWP/Galaxy Explorer/Assets/*
+!UWP/Galaxy Explorer/Assets/GE_LiveCube.glb
+
+!UWP/GE_POIMaker/
+/Assets/UI/POIs/POIs_processed.log.meta
