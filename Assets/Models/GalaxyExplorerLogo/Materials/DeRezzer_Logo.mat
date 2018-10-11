@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DeRezzer_Logo
+  m_Shader: {fileID: 4800000, guid: 54c11e7c8abdbd44c8ec073dba011f6c, type: 3}
+  m_ShaderKeywords: ALBEDO_OFF ALPHA_USAGE_OFF AMBIENTLIGHT_OFF DOWNLIGHT_OFF EMISSIVE_OFF
+    FRESNEL_OFF LIGHTPROBES_OFF LIGHT_OFF NORMAL_OFF SHOWDEBUG_OFF TINT_OFF VERTCOLOR_OFF
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: d4415607d4f95004388de73677c12a02, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ColorTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 4812dc9c49aacad4886f9172a9d3bc80, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DragonColorGradient
+        second:
+          m_Texture: {fileID: 2800000, guid: 1b17bdb808547684282d329a2197d9e9, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: 0.5
+      data:
+        first:
+          name: _TransitionAlpha
+        second: 1
+      data:
+        first:
+          name: __Size
+        second: 0.0068
+      data:
+        first:
+          name: __Hydrate
+        second: 1
+      data:
+        first:
+          name: __NoiseScale
+        second: 8
+      data:
+        first:
+          name: _Parallax
+        second: 0.02
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 0.5
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _AlphaCutoff
+        second: 0.72
+      data:
+        first:
+          name: _AlphaRange
+        second: 1.51
+      data:
+        first:
+          name: __Hardness
+        second: 2.69
+      data:
+        first:
+          name: _HydrateDirection
+        second: 0.215
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: __PointPushScale
+        second: {r: 0, g: 15.57, b: 15, a: 0}
+      data:
+        first:
+          name: __PointColor
+        second: {r: 0.439122, g: 0.80068225, b: 0.9632353, a: 1}
+      data:
+        first:
+          name: __FillColor
+        second: {r: 0.43921572, g: 0.8000001, b: 0.96470594, a: 1}
+      data:
+        first:
+          name: __NoiseScale
+        second: {r: 5.3, g: 14.1, b: 29.3, a: 82}
+      data:
+        first:
+          name: __WirePushScale
+        second: {r: 0, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: __LightColor
+        second: {r: 0.07801687, g: 0.1226457, b: 0.28676468, a: 1}

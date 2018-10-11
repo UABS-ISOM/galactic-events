@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 61f9124f6bef63c418b0c1d316076abb
+timeCreated: 1455305115
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: coreCube
+    100002: HoloCube
+    100004: //RootNode
+    100006: Handles
+    100008: Handles 1
+    100010: Handles 2
+    100012: Handles 3
+    100014: Handles 4
+    100016: Handles 5
+    100018: LeftHigh
+    100020: LeftHigh 1
+    100022: LeftHigh 2
+    100024: LeftHigh 3
+    100026: LeftHigh 4
+    100028: LeftHigh 5
+    100030: LeftLow
+    100032: LeftLow 1
+    100034: LeftLow 2
+    100036: LeftLow 3
+    100038: LeftLow 4
+    100040: LeftLow 5
+    100042: RightHigh
+    100044: RightHigh 1
+    100046: RightHigh 2
+    100048: RightHigh 3
+    100050: RightHigh 4
+    100052: RightHigh 5
+    100054: RightLow
+    100056: RightLow 1
+    100058: RightLow 2
+    100060: RightLow 3
+    100062: RightLow 4
+    100064: RightLow 5
+    100066: XNeg
+    100068: XNeg_BackFace
+    100070: XNeg_FrontFace
+    100072: XPos
+    100074: XPos_BackFace
+    100076: XPos_FrontFace
+    100078: YNeg
+    100080: YNeg_BackFace
+    100082: YNeg_FrontFace
+    100084: YPos
+    100086: YPos_BackFace
+    100088: YPos_FrontFace
+    100090: ZNeg
+    100092: ZNeg_BackFace
+    100094: ZNeg_FrontFace
+    100096: ZPos
+    100098: ZPos_BackFace
+    100100: ZPos_FrontFace
+    100102: CornerBumper_Template1
+    100104: CornerBumper_Template2
+    100106: CornerBumper_Template3
+    100108: CornerBumper_Template4
+    100110: CornerBumper_Template5
+    100112: CornerBumper_Template6
+    100114: CornerBumper_Template7
+    100116: CornerBumper_Template8
+    100118: CornerBumpers
+    100120: CornerGeo10
+    100122: CornerGeo11
+    100124: CornerGeo12
+    100126: CornerGeo13
+    100128: CornerGeo14
+    100130: CornerGeo15
+    100132: CornerGeo16
+    100134: CornerGeo17
+    100136: CornerGeo18
+    100138: CornerGeo19
+    100140: CornerGeo2
+    100142: CornerGeo20
+    100144: CornerGeo21
+    100146: CornerGeo22
+    100148: CornerGeo23
+    100150: CornerGeo24
+    100152: CornerGeo25
+    100154: CornerGeo3
+    100156: CornerGeo4
+    100158: CornerGeo5
+    100160: CornerGeo6
+    100162: CornerGeo7
+    100164: CornerGeo8
+    100166: CornerGeo9
+    100168: Corners_XNeg
+    100170: Corners_XPos
+    100172: Corners_YNeg
+    100174: Corners_YPos
+    100176: Corners_ZNeg
+    100178: Corners_ZPos
+    100180: Edges
+    100182: Edges1
+    100184: Edges10
+    100186: Edges11
+    100188: Edges12
+    100190: Edges2
+    100192: Edges3
+    100194: Edges4
+    100196: Edges5
+    100198: Edges6
+    100200: Edges7
+    100202: Edges8
+    100204: Edges9
+    100206: CornerHandle_nnn
+    100208: CornerHandle_nnp
+    100210: CornerHandle_npn
+    100212: CornerHandle_npp
+    100214: CornerHandle_pnn
+    100216: CornerHandle_pnp
+    100218: CornerHandle_ppn
+    100220: CornerHandle_ppp
+    100222: CubeHandleGroup
+    100224: QuixportSceneLocator
+    400000: coreCube
+    400002: HoloCube
+    400004: //RootNode
+    400006: Handles
+    400008: Handles 1
+    400010: Handles 2
+    400012: Handles 3
+    400014: Handles 4
+    400016: Handles 5
+    400018: LeftHigh
+    400020: LeftHigh 1
+    400022: LeftHigh 2
+    400024: LeftHigh 3
+    400026: LeftHigh 4
+    400028: LeftHigh 5
+    400030: LeftLow
+    400032: LeftLow 1
+    400034: LeftLow 2
+    400036: LeftLow 3
+    400038: LeftLow 4
+    400040: LeftLow 5
+    400042: RightHigh
+    400044: RightHigh 1
+    400046: RightHigh 2
+    400048: RightHigh 3
+    400050: RightHigh 4
+    400052: RightHigh 5
+    400054: RightLow
+    400056: RightLow 1
+    400058: RightLow 2
+    400060: RightLow 3
+    400062: RightLow 4
+    400064: RightLow 5
+    400066: XNeg
+    400068: XNeg_BackFace
+    400070: XNeg_FrontFace
+    400072: XPos
+    400074: XPos_BackFace
+    400076: XPos_FrontFace
+    400078: YNeg
+    400080: YNeg_BackFace
+    400082: YNeg_FrontFace
+    400084: YPos
+    400086: YPos_BackFace
+    400088: YPos_FrontFace
+    400090: ZNeg
+    400092: ZNeg_BackFace
+    400094: ZNeg_FrontFace
+    400096: ZPos
+    400098: ZPos_BackFace
+    400100: ZPos_FrontFace
+    400102: CornerBumper_Template1
+    400104: CornerBumper_Template2
+    400106: CornerBumper_Template3
+    400108: CornerBumper_Template4
+    400110: CornerBumper_Template5
+    400112: CornerBumper_Template6
+    400114: CornerBumper_Template7
+    400116: CornerBumper_Template8
+    400118: CornerBumpers
+    400120: CornerGeo10
+    400122: CornerGeo11
+    400124: CornerGeo12
+    400126: CornerGeo13
+    400128: CornerGeo14
+    400130: CornerGeo15
+    400132: CornerGeo16
+    400134: CornerGeo17
+    400136: CornerGeo18
+    400138: CornerGeo19
+    400140: CornerGeo2
+    400142: CornerGeo20
+    400144: CornerGeo21
+    400146: CornerGeo22
+    400148: CornerGeo23
+    400150: CornerGeo24
+    400152: CornerGeo25
+    400154: CornerGeo3
+    400156: CornerGeo4
+    400158: CornerGeo5
+    400160: CornerGeo6
+    400162: CornerGeo7
+    400164: CornerGeo8
+    400166: CornerGeo9
+    400168: Corners_XNeg
+    400170: Corners_XPos
+    400172: Corners_YNeg
+    400174: Corners_YPos
+    400176: Corners_ZNeg
+    400178: Corners_ZPos
+    400180: Edges
+    400182: Edges1
+    400184: Edges10
+    400186: Edges11
+    400188: Edges12
+    400190: Edges2
+    400192: Edges3
+    400194: Edges4
+    400196: Edges5
+    400198: Edges6
+    400200: Edges7
+    400202: Edges8
+    400204: Edges9
+    400206: CornerHandle_nnn
+    400208: CornerHandle_nnp
+    400210: CornerHandle_npn
+    400212: CornerHandle_npp
+    400214: CornerHandle_pnn
+    400216: CornerHandle_pnp
+    400218: CornerHandle_ppn
+    400220: CornerHandle_ppp
+    400222: CubeHandleGroup
+    400224: QuixportSceneLocator
+    2300000: coreCube
+    2300002: LeftHigh
+    2300004: LeftHigh 1
+    2300006: LeftHigh 2
+    2300008: LeftHigh 3
+    2300010: LeftHigh 4
+    2300012: LeftHigh 5
+    2300014: LeftLow
+    2300016: LeftLow 1
+    2300018: LeftLow 2
+    2300020: LeftLow 3
+    2300022: LeftLow 4
+    2300024: LeftLow 5
+    2300026: RightHigh
+    2300028: RightHigh 1
+    2300030: RightHigh 2
+    2300032: RightHigh 3
+    2300034: RightHigh 4
+    2300036: RightHigh 5
+    2300038: RightLow
+    2300040: RightLow 1
+    2300042: RightLow 2
+    2300044: RightLow 3
+    2300046: RightLow 4
+    2300048: RightLow 5
+    2300050: XNeg_BackFace
+    2300052: XNeg_FrontFace
+    2300054: XPos_BackFace
+    2300056: XPos_FrontFace
+    2300058: YNeg_BackFace
+    2300060: YNeg_FrontFace
+    2300062: YPos_BackFace
+    2300064: YPos_FrontFace
+    2300066: ZNeg_BackFace
+    2300068: ZNeg_FrontFace
+    2300070: ZPos_BackFace
+    2300072: ZPos_FrontFace
+    2300074: CornerBumper_Template1
+    2300076: CornerBumper_Template2
+    2300078: CornerBumper_Template3
+    2300080: CornerBumper_Template4
+    2300082: CornerBumper_Template5
+    2300084: CornerBumper_Template6
+    2300086: CornerBumper_Template7
+    2300088: CornerBumper_Template8
+    2300090: CornerGeo10
+    2300092: CornerGeo11
+    2300094: CornerGeo12
+    2300096: CornerGeo13
+    2300098: CornerGeo14
+    2300100: CornerGeo15
+    2300102: CornerGeo16
+    2300104: CornerGeo17
+    2300106: CornerGeo18
+    2300108: CornerGeo19
+    2300110: CornerGeo2
+    2300112: CornerGeo20
+    2300114: CornerGeo21
+    2300116: CornerGeo22
+    2300118: CornerGeo23
+    2300120: CornerGeo24
+    2300122: CornerGeo25
+    2300124: CornerGeo3
+    2300126: CornerGeo4
+    2300128: CornerGeo5
+    2300130: CornerGeo6
+    2300132: CornerGeo7
+    2300134: CornerGeo8
+    2300136: CornerGeo9
+    2300138: Edges1
+    2300140: Edges10
+    2300142: Edges11
+    2300144: Edges12
+    2300146: Edges2
+    2300148: Edges3
+    2300150: Edges4
+    2300152: Edges5
+    2300154: Edges6
+    2300156: Edges7
+    2300158: Edges8
+    2300160: Edges9
+    2300162: CornerHandle_nnn
+    2300164: CornerHandle_nnp
+    2300166: CornerHandle_npn
+    2300168: CornerHandle_npp
+    2300170: CornerHandle_pnn
+    2300172: CornerHandle_pnp
+    2300174: CornerHandle_ppn
+    2300176: CornerHandle_ppp
+    3300000: coreCube
+    3300002: LeftHigh
+    3300004: LeftHigh 1
+    3300006: LeftHigh 2
+    3300008: LeftHigh 3
+    3300010: LeftHigh 4
+    3300012: LeftHigh 5
+    3300014: LeftLow
+    3300016: LeftLow 1
+    3300018: LeftLow 2
+    3300020: LeftLow 3
+    3300022: LeftLow 4
+    3300024: LeftLow 5
+    3300026: RightHigh
+    3300028: RightHigh 1
+    3300030: RightHigh 2
+    3300032: RightHigh 3
+    3300034: RightHigh 4
+    3300036: RightHigh 5
+    3300038: RightLow
+    3300040: RightLow 1
+    3300042: RightLow 2
+    3300044: RightLow 3
+    3300046: RightLow 4
+    3300048: RightLow 5
+    3300050: XNeg_BackFace
+    3300052: XNeg_FrontFace
+    3300054: XPos_BackFace
+    3300056: XPos_FrontFace
+    3300058: YNeg_BackFace
+    3300060: YNeg_FrontFace
+    3300062: YPos_BackFace
+    3300064: YPos_FrontFace
+    3300066: ZNeg_BackFace
+    3300068: ZNeg_FrontFace
+    3300070: ZPos_BackFace
+    3300072: ZPos_FrontFace
+    3300074: CornerBumper_Template1
+    3300076: CornerBumper_Template2
+    3300078: CornerBumper_Template3
+    3300080: CornerBumper_Template4
+    3300082: CornerBumper_Template5
+    3300084: CornerBumper_Template6
+    3300086: CornerBumper_Template7
+    3300088: CornerBumper_Template8
+    3300090: CornerGeo10
+    3300092: CornerGeo11
+    3300094: CornerGeo12
+    3300096: CornerGeo13
+    3300098: CornerGeo14
+    3300100: CornerGeo15
+    3300102: CornerGeo16
+    3300104: CornerGeo17
+    3300106: CornerGeo18
+    3300108: CornerGeo19
+    3300110: CornerGeo2
+    3300112: CornerGeo20
+    3300114: CornerGeo21
+    3300116: CornerGeo22
+    3300118: CornerGeo23
+    3300120: CornerGeo24
+    3300122: CornerGeo25
+    3300124: CornerGeo3
+    3300126: CornerGeo4
+    3300128: CornerGeo5
+    3300130: CornerGeo6
+    3300132: CornerGeo7
+    3300134: CornerGeo8
+    3300136: CornerGeo9
+    3300138: Edges1
+    3300140: Edges10
+    3300142: Edges11
+    3300144: Edges12
+    3300146: Edges2
+    3300148: Edges3
+    3300150: Edges4
+    3300152: Edges5
+    3300154: Edges6
+    3300156: Edges7
+    3300158: Edges8
+    3300160: Edges9
+    3300162: CornerHandle_nnn
+    3300164: CornerHandle_nnp
+    3300166: CornerHandle_npn
+    3300168: CornerHandle_npp
+    3300170: CornerHandle_pnn
+    3300172: CornerHandle_pnp
+    3300174: CornerHandle_ppn
+    3300176: CornerHandle_ppp
+    4300000: coreCube
+    4300002: ZPos_BackFace
+    4300004: ZPos_FrontFace
+    4300006: LeftLow
+    4300008: LeftHigh
+    4300010: RightHigh
+    4300012: RightLow
+    4300014: XNeg_BackFace
+    4300016: XNeg_FrontFace
+    4300018: LeftLow
+    4300020: LeftHigh
+    4300022: RightHigh
+    4300024: RightLow
+    4300026: YNeg_BackFace
+    4300028: YNeg_FrontFace
+    4300030: LeftLow
+    4300032: LeftHigh
+    4300034: RightHigh
+    4300036: RightLow
+    4300038: XPos_BackFace
+    4300040: XPos_FrontFace
+    4300042: LeftLow
+    4300044: LeftHigh
+    4300046: RightHigh
+    4300048: RightLow
+    4300050: YPos_BackFace
+    4300052: YPos_FrontFace
+    4300054: LeftLow
+    4300056: LeftHigh
+    4300058: RightHigh
+    4300060: RightLow
+    4300062: ZNeg_BackFace
+    4300064: ZNeg_FrontFace
+    4300066: LeftLow
+    4300068: LeftHigh
+    4300070: RightHigh
+    4300072: RightLow
+    4300074: CornerGeo3
+    4300076: CornerGeo5
+    4300078: CornerGeo4
+    4300080: CornerGeo2
+    4300082: CornerGeo19
+    4300084: CornerGeo21
+    4300086: CornerGeo20
+    4300088: CornerGeo18
+    4300090: CornerGeo23
+    4300092: CornerGeo25
+    4300094: CornerGeo24
+    4300096: CornerGeo22
+    4300098: CornerGeo11
+    4300100: CornerGeo13
+    4300102: CornerGeo12
+    4300104: CornerGeo10
+    4300106: CornerGeo7
+    4300108: CornerGeo8
+    4300110: CornerGeo9
+    4300112: CornerGeo6
+    4300114: CornerGeo15
+    4300116: CornerGeo14
+    4300118: CornerGeo16
+    4300120: CornerGeo17
+    4300122: Edges1
+    4300124: Edges2
+    4300126: Edges3
+    4300128: Edges4
+    4300130: Edges5
+    4300132: Edges6
+    4300134: Edges7
+    4300136: Edges8
+    4300138: Edges9
+    4300140: Edges10
+    4300142: Edges11
+    4300144: Edges12
+    4300146: CornerBumper_Template1
+    4300148: CornerBumper_Template2
+    4300150: CornerBumper_Template3
+    4300152: CornerBumper_Template4
+    4300154: CornerBumper_Template5
+    4300156: CornerBumper_Template6
+    4300158: CornerBumper_Template7
+    4300160: CornerBumper_Template8
+    4300162: CornerHandle_ppp
+    4300164: CornerHandle_npp
+    4300166: CornerHandle_ppn
+    4300168: CornerHandle_npn
+    4300170: CornerHandle_pnp
+    4300172: CornerHandle_pnn
+    4300174: CornerHandle_nnn
+    4300176: CornerHandle_nnp
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
