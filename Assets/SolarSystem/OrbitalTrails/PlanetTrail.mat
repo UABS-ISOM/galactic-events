@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: PlanetTrail
   m_Shader: {fileID: 4800000, guid: bb0e773714c0a214b86082c7e1e7e4e4, type: 3}

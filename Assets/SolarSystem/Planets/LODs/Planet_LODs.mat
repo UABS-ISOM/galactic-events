@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Planet_LODs
   m_Shader: {fileID: 4800000, guid: 383dbe85b94e8a3469129dae667de3c3, type: 3}

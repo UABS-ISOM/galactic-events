@@ -28,12 +28,12 @@ namespace GalaxyExplorer
         private bool floorVisible = false;
         private bool recalculateFloor = false;
 
-        private KeywordManager keywordManager = null;
+        //private KeywordManager keywordManager = null;
 
         private void Awake()
         {
-            keywordManager = GetComponent<KeywordManager>();
-            keywordManager.enabled = MyAppPlatformManager.SpeechEnabled;
+            //keywordManager = GetComponent<KeywordManager>();
+            //keywordManager.enabled = MyAppPlatformManager.SpeechEnabled;
 
             // parent the MotionControllers to the Camera rigs
             if (MotionControllers != null)
@@ -60,7 +60,7 @@ namespace GalaxyExplorer
                 mrtNew.EnableStrafe = mrt.EnableStrafe;
                 mrtNew.RotationSize = mrt.RotationSize;
                 mrtNew.StrafeAmount = mrt.StrafeAmount;
-                mrtNew.TeleportMarker = mrt.TeleportMarker;
+                //mrtNew.TeleportMarker = mrt.TeleportMarker;
                 mrtNew.enabled = true;
 
                 var sgl = GetComponent<SetGlobalListener>();
@@ -99,10 +99,10 @@ namespace GalaxyExplorer
             {
                 // If not, disable the playspace manager
                 gameObject.SetActive(false);
-                if (keywordManager.enabled)
-                {
-                    keywordManager.StopKeywordRecognizer();
-                }
+                //if (keywordManager.enabled)
+                //{
+                //    keywordManager.StopKeywordRecognizer();
+                //}
                 yield break;
             }
 

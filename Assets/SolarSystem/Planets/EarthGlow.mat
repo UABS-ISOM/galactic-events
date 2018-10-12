@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: EarthGlow
   m_Shader: {fileID: 4800000, guid: 33bbba0a16b87104faf8a3ba518cf840, type: 3}

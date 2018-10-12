@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: CursorStatesMaterial
   m_Shader: {fileID: 4800000, guid: 98f17b5397bdea141acf8d0cc606ad2c, type: 3}
