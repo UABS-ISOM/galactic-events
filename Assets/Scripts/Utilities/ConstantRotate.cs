@@ -1,13 +1,17 @@
 ﻿// Copyright Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GalaxyExplorer
 {
     public class ConstantRotate : MonoBehaviour
     {
+
         public Vector3 rotateSpeed;
+        public Vector3 adjustedRotateSpeed;
 
         public bool RandomRotationSpeed = false;
         public bool RandomRotationDirection = false;
@@ -49,7 +53,8 @@ namespace GalaxyExplorer
 
         private void Update()
         {
-            transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles + (rotateSpeed * Time.deltaTime));
+            adjustedRotateSpeed = rotateSpeed * GalaticController.instance.speedMultiplier;
+            transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles + (adjustedRotateSpeed * Time.deltaTime));
         }
     }
 }
