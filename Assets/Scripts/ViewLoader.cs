@@ -65,6 +65,7 @@ namespace GalaxyExplorer
                 return;
             }
 
+            SceneManager.LoadScene("CoreGalaticController", LoadSceneMode.Additive);
             transitionAudioSource = GetComponent<AudioSource>();
         }
 
