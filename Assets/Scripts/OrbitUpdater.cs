@@ -2,7 +2,9 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GalaxyExplorer
 {
@@ -123,6 +125,7 @@ namespace GalaxyExplorer
         // Update is called once per frame
         private void Update()
         {
+            SpeedMultiplier = GalaticController.instance.speedMultiplier;
             if (computed && TransitionSpeedMultiplier == 0.0f)
             {
                 // Don't animate the planet rotation during transitions
