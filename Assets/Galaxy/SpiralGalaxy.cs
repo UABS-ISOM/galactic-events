@@ -57,7 +57,6 @@ namespace GalaxyExplorer
         public float worldSpaceScale;
         public int lastCount;
         public float velocityMultiplier = 5;
-        private float adjustedVeloityMultiplier;
 
         private GameObject generated;
         private DrawStars generatedDrawer;
@@ -194,14 +193,13 @@ namespace GalaxyExplorer
 
         private void Update()
         {
-            adjustedVeloityMultiplier = velocityMultiplier * GalaticController.instance.speedMultiplier;
-            age += Time.deltaTime;
+            age += Time.deltaTime * GalaticController.instance.speedMultiplier;
 
             if (generatedDrawer)
             {
-                baseMaterial.SetFloat("_Age", age * adjustedVeloityMultiplier);
+                baseMaterial.SetFloat("_Age", age * velocityMultiplier);
 
-                generatedDrawer.Age = age * adjustedVeloityMultiplier;
+                generatedDrawer.Age = age * velocityMultiplier;
             }
         }
 
