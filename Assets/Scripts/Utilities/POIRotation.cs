@@ -10,7 +10,6 @@ public class POIRotation : MonoBehaviour {
 	}
 	
 	void Update () {
-        Debug.Log(POIRotationAnim.GetCurrentAnimatorStateInfo(0).fullPathHash);
         if (POIRotationAnim.GetCurrentAnimatorStateInfo(0).IsName("GalaxyRotation"))
         {
             POIRotationAnim.speed = GalaticController.instance.speedMultiplier;
