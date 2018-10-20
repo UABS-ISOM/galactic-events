@@ -68,3 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Views/ChronozoomMenuView.unity
     guid: 323c2fb0768d6a743bbac70585d5d9be
+  - enabled: 1
+    path: Assets/Scenes/CoreGalaticController.unity
+    guid: a3631986152f7dd4298ec887ec455067
+  m_configObjects: {}

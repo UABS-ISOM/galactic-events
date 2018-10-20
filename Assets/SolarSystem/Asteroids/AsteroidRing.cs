@@ -41,6 +41,7 @@ namespace GalaxyExplorer
         public int lastCount = 0;
 
         public float rotationSpeed;
+        private float adjustedRotationSpeed;
         private float age;
 
         private GameObject generated;
@@ -208,7 +209,8 @@ namespace GalaxyExplorer
 
         private void Update()
         {
-            age += Time.deltaTime * rotationSpeed;
+            adjustedRotationSpeed = rotationSpeed * GalaticController.instance.speedMultiplier;
+            age += Time.deltaTime * adjustedRotationSpeed;
 
             if (instancingMaterial)
             {

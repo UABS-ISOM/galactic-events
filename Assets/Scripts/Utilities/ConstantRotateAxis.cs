@@ -9,12 +9,14 @@ namespace GalaxyExplorer
     {
         public Vector3 axis;
         public float speed;
+        private float adjustedSpeed;
 
         private void Update()
         {
+            adjustedSpeed = speed * GalaticController.instance.speedMultiplier;
             if (axis.magnitude > 0)
             {
-                transform.localRotation *= Quaternion.AngleAxis(speed * Time.deltaTime, axis.normalized);
+                transform.localRotation *= Quaternion.AngleAxis(adjustedSpeed * Time.deltaTime, axis.normalized);
             }
         }
     }

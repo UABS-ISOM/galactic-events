@@ -65,6 +65,16 @@ namespace GalaxyExplorer
 
         private void Update()
         {
+            //NOTE THIS IS ONLY FOR TESTING PURPOSE, SHOULD BE REMOVED WHEN THERE IS A SUITABLE APPROACH
+            if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.Equals))
+            {
+                GalaticController.instance.speedMultiplier += 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Minus))
+            {
+                GalaticController.instance.speedMultiplier -= 1;
+            }
+
             // Check for all keys that are registered for events
             foreach (KeyCodeEventPair keyCheck in keyCallbacks.Keys)
             {

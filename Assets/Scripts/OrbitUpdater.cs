@@ -123,6 +123,7 @@ namespace GalaxyExplorer
         // Update is called once per frame
         private void Update()
         {
+            SpeedMultiplier = GalaticController.instance.speedMultiplier;
             if (computed && TransitionSpeedMultiplier == 0.0f)
             {
                 // Don't animate the planet rotation during transitions

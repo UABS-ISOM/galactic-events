@@ -193,7 +193,7 @@ namespace GalaxyExplorer
 
         private void Update()
         {
-            age += Time.deltaTime;
+            age += Time.deltaTime * GalaticController.instance.speedMultiplier;
 
             if (generatedDrawer)
             {

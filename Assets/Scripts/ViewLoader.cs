@@ -61,10 +61,11 @@ namespace GalaxyExplorer
         {
             if (ViewLoader.Instance != this)
             {
-                DestroyObject(gameObject);
+                Destroy(gameObject);
                 return;
             }
 
+            SceneManager.LoadScene("CoreGalaticController", LoadSceneMode.Additive);
             transitionAudioSource = GetComponent<AudioSource>();
         }
 
