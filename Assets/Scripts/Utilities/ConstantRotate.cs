@@ -1,9 +1,7 @@
 ﻿// Copyright Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace GalaxyExplorer
 {
