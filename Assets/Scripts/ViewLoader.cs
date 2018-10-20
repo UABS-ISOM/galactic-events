@@ -61,7 +61,7 @@ namespace GalaxyExplorer
         {
             if (ViewLoader.Instance != this)
             {
-                DestroyObject(gameObject);
+                Destroy(gameObject);
                 return;
             }
 

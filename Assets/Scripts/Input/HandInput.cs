@@ -63,7 +63,7 @@ namespace GalaxyExplorer
         {
             if (MyAppPlatformManager.Platform != MyAppPlatformManager.PlatformId.HoloLens)
             {
-                DestroyObject(this);
+                Destroy(this);
                 return;
             }
             // Start out with a clean state by resetting both hand structures.
