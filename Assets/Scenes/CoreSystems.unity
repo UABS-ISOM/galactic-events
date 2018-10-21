@@ -632,9 +632,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VoiceCommands: []
-  TooltipObject: {fileID: 0}
-  DefaultMaterial: {fileID: 0}
-  HightlightMaterial: {fileID: 0}
+  TooltipObject: {fileID: 653294639}
+  DefaultMaterial: {fileID: 2100000, guid: 92246746bf1a36e43938cc2013023e40, type: 2}
+  HightlightMaterial: {fileID: 2100000, guid: 875a7a989253c2e409814bfb0d1661a8, type: 2}
   type: 6
   IsDisabled: 0
 --- !u!65 &349251384
@@ -698,7 +698,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 276e812b7ef95924ba8120462e9431ee, type: 2}
+  - {fileID: 2100000, guid: bbeeed72db747804187a4aea6c29a30c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3470,9 +3470,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VoiceCommands: []
-  TooltipObject: {fileID: 0}
-  DefaultMaterial: {fileID: 0}
-  HightlightMaterial: {fileID: 0}
+  TooltipObject: {fileID: 1470184726}
+  DefaultMaterial: {fileID: 2100000, guid: bbeeed72db747804187a4aea6c29a30c, type: 2}
+  HightlightMaterial: {fileID: 2100000, guid: 7894d54fedc4b0c47b1794ca9ccbb7f2, type: 2}
   type: 7
   IsDisabled: 0
 --- !u!65 &1809757936
@@ -3904,7 +3904,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 276e812b7ef95924ba8120462e9431ee, type: 2}
+  - {fileID: 2100000, guid: 92246746bf1a36e43938cc2013023e40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
