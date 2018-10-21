@@ -14,7 +14,9 @@ namespace GalaxyExplorer
         Rotate,
         Zoom,
         Reset,
-        About
+        About,
+        SpeedUp,
+        SpeedDown
     }
 
     public class Tool : GazeSelectionTarget, IFadeTarget
@@ -344,6 +346,11 @@ namespace GalaxyExplorer
 
                     contentToManipulate.transform.localScale = new Vector3(newScale, newScale, newScale);
                     ToolManager.Instance.RaiseContentZoomChanged();
+                    break;
+
+                case ToolType.SpeedUp:
+                    break;
+                case ToolType.SpeedDown:
                     break;
             }
         }
