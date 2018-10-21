@@ -14,7 +14,9 @@ namespace GalaxyExplorer
         Back,
         Hide,
         Show,
-        About
+        About,
+        SpeedUp,
+        SpeedDown
     }
 
     public class Button : GazeSelectionTarget, IFadeTarget
@@ -240,6 +242,13 @@ namespace GalaxyExplorer
                 case ButtonType.Show:
                 case ButtonType.Hide:
                     ToolManager.Instance.ToggleTools();
+                    break;
+
+                case ButtonType.SpeedUp:
+                    GalaticController.instance.speedMultiplier += 1;
+                    break;
+                case ButtonType.SpeedDown:
+                    GalaticController.instance.speedMultiplier -= 1;
                     break;
             }
         }
