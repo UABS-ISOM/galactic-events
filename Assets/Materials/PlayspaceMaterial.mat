@@ -7,16 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: PlayspaceMaterial
-  m_Shader: {fileID: 4800000, guid: d45c0efca53019e43891b0f610f8146e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4608ddaaa7c2f034187e0c099f41f627, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _BORDER_LIGHT _BORDER_LIGHT_USES_HOVER_COLOR
-    _DISABLE_ALBEDO_MAP _INNER_GLOW _SPECULAR_HIGHLIGHTS _USEAMBIENT_ON _USEDIFFUSE_ON
-    _USEMAINCOLOR_ON
+    _DISABLE_ALBEDO_MAP _DRAWBORDER_ON _DRAWGRID_ON _INNER_GLOW _SPECULAR_HIGHLIGHTS
+    _USEAMBIENT_ON _USEDIFFUSE_ON _USEMAINCOLOR_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -98,6 +97,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DirectionalLight: 0
+    - _DrawBorder: 1
+    - _DrawGrid: 1
     - _DstBlend: 0
     - _EdgeSmoothingValue: 0.0001
     - _EnableEmission: 0
@@ -177,3 +178,4 @@ Material:
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TextureScaleOffset: {r: 1, g: 1, b: 0, a: 0}
+    - _WorldScale: {r: 3, g: 3, b: 1, a: 0}
