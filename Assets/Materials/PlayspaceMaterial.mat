@@ -118,8 +118,8 @@ Material:
     - _HoverLight: 0
     - _HoverLightOpaque: 0
     - _InnerGlow: 1
-    - _LineScale: 0.015
-    - _LinesPerMeter: 3
+    - _LineScale: 0.00075
+    - _LinesPerMeter: 10
     - _MainTex_OFFSET: 0
     - _MainTex_SCALE: 0
     - _Metallic: 0
@@ -178,4 +178,4 @@ Material:
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TextureScaleOffset: {r: 1, g: 1, b: 0, a: 0}
-    - _WorldScale: {r: 3, g: 3, b: 1, a: 0}
+    - _WorldScale: {r: 5, g: 5, b: 1, a: 0}
