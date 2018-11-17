@@ -7,7 +7,7 @@ namespace GalaxyExplorer
 {
     public class BackendService : MonoBehaviour
     {
-
+        private string baseURL = "http://localhost:3000";
         public static BackendService instance = null;
 
         void Awake()
@@ -31,8 +31,7 @@ namespace GalaxyExplorer
             WWWForm formData = new WWWForm();
             formData.AddField("target", actionTarget);
 
-            UnityWebRequest rq = UnityWebRequest.Post("http://localhost:3000/api/action-log", formData);
-            rq.SendWebRequest();
+            UnityWebRequest.Post(baseURL + "/api/action-log", formData).SendWebRequest();
         }
 
     }
