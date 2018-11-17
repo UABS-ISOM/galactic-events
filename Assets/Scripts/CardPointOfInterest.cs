@@ -143,6 +143,9 @@ namespace GalaxyExplorer
             }
             else
             {
+                // log action to server
+                BackendService.instance.LogAction(TargetPoint.name);
+
                 // prevent other cards from being selected while this one is selected
                 CardPOIManager.Instance.CanTapCard = false;
 
