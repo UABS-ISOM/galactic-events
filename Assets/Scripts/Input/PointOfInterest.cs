@@ -236,6 +236,7 @@ namespace GalaxyExplorer
                 CardPOIManager.Instance.HideAllCards();
             }
 
+            // log action to server
             BackendService.instance.LogAction(TransitionScene);
 
             GoToScene();
