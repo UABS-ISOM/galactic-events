@@ -61,7 +61,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _ColorWriteMask: 15
-    - _ContentRadius: 1.3999999
+    - _ContentRadius: 1.4000024
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -87,7 +87,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ContentWorldPos: {r: 0, g: 1.65, b: 2.0985, a: 0}
+    - _ContentWorldPos: {r: 0.32750067, g: 0.55007255, b: 1.7222111, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _WireColor: {r: 1, g: 1, b: 1, a: 1}
