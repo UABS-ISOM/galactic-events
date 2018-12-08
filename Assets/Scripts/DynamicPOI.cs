@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,16 @@ namespace GalaxyExplorer
                 parent_POIRot = transform.Find(context + "Content/SceneLoadHider/HeroView/POIRotation");
 
                 // get the elements to plot
-                // PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
+                ChronozoomLoader loader = new ChronozoomLoader();
+                loader.SuperCollection = "chronozoom";
+
+                StartCoroutine(loader.GetChronozoomData((List<Exhibit> exList) =>
+                {
+                    exList.ForEach((Exhibit ex) =>
+                    {
+                        // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
+                    });
+                }));
             }
         }
 
