@@ -430,7 +430,7 @@ namespace GalaxyExplorer
             ViewLoader.Instance.LoadViewAsync(sceneName, false, PreLoadSceneLoaded);
         }
 
-        private void PreLoadSceneLoaded(GameObject content, string oldSceneName)
+        private void PreLoadSceneLoaded(string viewName, GameObject content, string oldSceneName)
         {
             // activate the content target but zero its scale, so we do not see it the first frame it is loaded
             GameObject contentTarget = content.transform.GetChild(0).gameObject;
@@ -485,17 +485,17 @@ namespace GalaxyExplorer
             ViewLoader.Instance.LoadViewAsync(sceneName, false, PrevSceneLoaded);
         }
 
-        private void PrevSceneLoaded(GameObject content, string oldSceneName)
+        private void PrevSceneLoaded(string viewName, GameObject content, string oldSceneName)
         {
             sceneToUnload = oldSceneName;
 
-            StartCoroutine(PrevSceneLoadedCoroutine(content));
+            StartCoroutine(PrevSceneLoadedCoroutine(viewName, content));
         }
 
-        private IEnumerator PrevSceneLoadedCoroutine(GameObject content)
+        private IEnumerator PrevSceneLoadedCoroutine(string viewName, GameObject content)
         {
             WaitForFixedUpdate fixedUpdate = new WaitForFixedUpdate();
-
+            
             // wait until introduction animations are complete (fading out points of interest, slowing down orbit speeds, etc.) before transitioning content
             while (fadingPointsOfInterest)
             {
@@ -744,6 +744,9 @@ namespace GalaxyExplorer
                 prevSceneLoaded.transform.SetParent(content.transform, true);
             }
 
+            // load points of interest into the scene
+            GameObject.Find("/ViewLoader").GetComponent<DynamicPOI>().PlotItems(viewName);
+
             // the rotation of the planet in the solar system is independent of its relationshipt with the sun (to align with the previous scene's planet)
             // and the rotation has to be set after it is parented to match rotations
             if (nextPlanet != null)
@@ -801,7 +804,7 @@ namespace GalaxyExplorer
             ViewLoader.Instance.LoadViewAsync(sceneName, true, NextSceneLoaded);
         }
 
-        private void NextSceneLoaded(GameObject content, string oldSceneName)
+        private void NextSceneLoaded(string viewName, GameObject content, string oldSceneName)
         {
             sceneToUnload = oldSceneName;
 

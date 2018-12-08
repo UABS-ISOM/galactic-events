@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 namespace GalaxyExplorer
 {
-    public delegate void SceneLoaded(GameObject content, string oldSceneName);
+    public delegate void SceneLoaded(string viewName, GameObject content, string oldSceneName);
 
     public class ViewLoader : SingleInstance<ViewLoader>
     {
@@ -281,7 +281,7 @@ namespace GalaxyExplorer
 
             if (sceneLoadedCallback != null)
             {
-                sceneLoadedCallback(newContent, oldView);
+                sceneLoadedCallback(viewName, newContent, oldView);
             }
         }
 
