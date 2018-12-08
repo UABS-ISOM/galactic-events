@@ -13,8 +13,8 @@ namespace GalaxyExplorer
             {
                 parent_POIRot = transform.Find(context + "Content/SceneLoadHider/HeroView/POIRotation");
 
-                // get the elements to plot, in this case, just test items
-                PlotPOI("test", "something!", "ChronozoomMenuView", new Vector3(-1, 0, .2f));
+                // get the elements to plot
+                // PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
             }
         }
 
