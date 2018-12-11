@@ -19,8 +19,8 @@ namespace GalaxyExplorer
         {
             // set values to a sensible default when there's not ctor vals supplied
             x = y = i = distance = 0;
-            gap = .04f;
-            distance_var = .05f;
+            gap = .08f;
+            distance_var = .002f;
         }
 
         public PlotPatternGalaxy(float x, float y, float z, float gap, float distance, float distance_var)
@@ -34,24 +34,17 @@ namespace GalaxyExplorer
             this.distance_var = distance_var;
         }
 
-        public PlotPoint GetPoint()
+        public Vector3 GetPoint()
         {
             x = Mathf.Sin(i * gap) * distance;
-            z = Mathf.Cos(i * gap) * distance;
             y = 0;
+            z = Mathf.Cos(i * gap) * distance;
 
             distance = i * distance_var;
 
             i++;
 
-            return new PlotPoint() { x = x, y = y, z = z };
+            return new Vector3(x, y, z);
         }
-    }
-
-    public class PlotPoint
-    {
-        public float x;
-        public float y;
-        public float z;
     }
 }

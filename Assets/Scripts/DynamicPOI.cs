@@ -19,8 +19,21 @@ namespace GalaxyExplorer
 
                 StartCoroutine(loader.GetChronozoomData((List<Exhibit> exList) =>
                 {
+                    PlotPatternGalaxy pattern = new PlotPatternGalaxy();
+
                     exList.ForEach((Exhibit ex) =>
                     {
+                        PlotPOI(ex.id, ex.title, null, pattern.GetPoint(), parent);
+
+                        //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
+                        //obj.name = ex.id;
+                        //obj.transform.SetParent(parent);
+                        //obj.transform.localScale = new Vector3(.04f, .04f, .04f);
+
+                        //obj.transform.position = transform.position;
+                        //obj.transform.Translate(pattern.GetPoint(), parent.transform);
+
                         // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
                     });
                 }));
@@ -33,10 +46,12 @@ namespace GalaxyExplorer
             // setup structure
             GameObject poi = (GameObject)Instantiate(
                 Resources.Load("Prefabs/POI", typeof(GameObject)),
-                position, Quaternion.identity,
+                transform.position, Quaternion.identity,
                 parent);
 
             poi.name = name;
+            poi.transform.Translate(position, parent.transform);
+
             poi.transform.Find("ScaleWithDistance target/POI").gameObject.GetComponent<PointOfInterest>().TransitionScene = transitionScene;
             poi.transform.Find("ScaleWithDistance target/POI/ScaleWithDistance target/FaceCamera/Card").gameObject.GetComponent<TextMesh>().text = cardText;
         }
