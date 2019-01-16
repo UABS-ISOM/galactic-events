@@ -11,7 +11,8 @@ namespace GalaxyExplorer
         {
             if (context == "GalaxyView")
             {
-                Transform parent = transform.Find(context + "Content/SceneLoadHider/HeroView/POIRotation");
+                Transform hero = transform.Find(context + "Content/SceneLoadHider/HeroView");
+                Transform parent = hero.Find("POIRotation");
 
                 // get the elements to plot
                 ChronozoomLoader loader = new ChronozoomLoader();
@@ -19,11 +20,13 @@ namespace GalaxyExplorer
 
                 StartCoroutine(loader.GetChronozoomData((List<Exhibit> exList) =>
                 {
-                    PlotPatternGalaxy pattern = new PlotPatternGalaxy();
+                    //PlotPatternGalaxy pattern = new PlotPatternGalaxy();
+                    PlotPatternSpiralPath pattern = hero.GetComponent<PlotPatternSpiralPath>();
+                    pattern.Setup(exList.Count);
 
-                    exList.ForEach((Exhibit ex) =>
-                    {
-                        PlotPOI(ex.id, ex.title, null, pattern.GetPoint(), parent);
+                    //exList.ForEach((Exhibit ex) =>
+                    //{
+                        //PlotPOI(ex.id, ex.title, null, pattern.GetPoint(), parent);
 
                         //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
@@ -35,7 +38,7 @@ namespace GalaxyExplorer
                         //obj.transform.Translate(pattern.GetPoint(), parent.transform);
 
                         // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
-                    });
+                    //});
                 }));
             }
         }
