@@ -15,16 +15,13 @@ namespace GalaxyExplorer
             spiralContainer.transform.SetParent(transform);
             spiralContainer.transform.localPosition = new Vector3(4, 1.75f, -.35f);
 
-            Quaternion rotation = spiralContainer.transform.localRotation;
-            rotation.y = -90;
-
-            spiralContainer.transform.localRotation = rotation;
+            spiralContainer.transform.rotation = Quaternion.Euler(new Vector3(-117, 200, 125));
 
             for (int i = 0; i < itemCount; i++)
             {
                 GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sphere.transform.SetParent(spiralContainer.transform);
-                sphere.transform.localScale = new Vector3(.1f, .1f, .1f);
+                sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
                 sphere.transform.localPosition = spiralPattern.GetPoint();
             }
         }
