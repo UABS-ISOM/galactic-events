@@ -9,7 +9,6 @@ namespace GalaxyExplorer
         private PlotPatternGalaxy spiralPattern = new PlotPatternGalaxy();
         private GameObject spiralContainer;
         private GameObject bezPath;
-        private int bezPathMax = 12; // number of points allowed on the path at once
 
         private GameObject spiralLastNode;
 
@@ -23,7 +22,7 @@ namespace GalaxyExplorer
 
             for (int i = 0; i < itemCount; i++)
             {
-                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                GameObject sphere = new GameObject(string.Format("Node {0}", i));
                 sphere.transform.SetParent(spiralContainer.transform);
                 sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
                 sphere.transform.localPosition = spiralPattern.GetPoint();
@@ -43,18 +42,20 @@ namespace GalaxyExplorer
                 new Vector3(1.2f, -1.23f, -1.5f)
             };
 
-            for (int i = 0; i < bezPathMax; i++)
-            {
-                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                sphere.transform.SetParent(bezPath.transform);
-                sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
-                sphere.transform.position = curve.GetPoint(i / (float)bezPathMax);
-            }
+            //for (int i = 0; i < 12; i++)
+            //{
+            //    GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            //    sphere.transform.SetParent(bezPath.transform);
+            //    sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
+            //    sphere.transform.position = curve.GetPoint(i / 12f); // 12 just used for demo
+            //}
         }
 
-        public Vector3 GetPoint()
+        public Transform GetSpiralNode(int index)
         {
-            return spiralPattern.GetPoint();
+            if (index <= spiralContainer.transform.childCount)
+                return spiralContainer.transform.GetChild(index);
+            else return null;
         }
     }
 }
