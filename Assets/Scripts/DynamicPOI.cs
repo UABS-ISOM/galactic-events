@@ -7,6 +7,8 @@ namespace GalaxyExplorer
 {
     public class DynamicPOI : MonoBehaviour
     {
+        private Queue<Action> initPlot = new Queue<Action>();
+
         public void PlotItems(string context)
         {
             if (context == "GalaxyView")
@@ -27,7 +29,7 @@ namespace GalaxyExplorer
                     int i = 0;
                     exList.ForEach((Exhibit ex) =>
                     {
-                        PlotPOI(ex.id, ex.title, null, pattern.GetSpiralNode(i++));
+                        initPlot.Enqueue(() => PlotPOI(ex.id, ex.title, null, pattern.GetSpiralNode(i++)));
 
                         //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
@@ -42,6 +44,11 @@ namespace GalaxyExplorer
                     });
                 }));
             }
+        }
+
+        void Update()
+        {
+            if (initPlot.Count > 0) initPlot.Dequeue()(); // plot once per update
         }
 
         // plot a point of interest programmatically
