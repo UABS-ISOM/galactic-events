@@ -6,11 +6,10 @@ namespace GalaxyExplorer
 {
     public class PlotPatternSpiralPath : MonoBehaviour
     {
-        private PlotPatternGalaxy spiralPattern = new PlotPatternGalaxy();
-        private GameObject spiralContainer;
-        private GameObject bezPath;
+        public GameObject spiralContainer;
+        public GameObject bezPath;
 
-        private GameObject spiralLastNode;
+        private PlotPatternGalaxy spiralPattern = new PlotPatternGalaxy();
 
         public void Setup(int itemCount)
         {
@@ -26,8 +25,6 @@ namespace GalaxyExplorer
                 sphere.transform.SetParent(spiralContainer.transform);
                 sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
                 sphere.transform.localPosition = spiralPattern.GetPoint();
-
-                if (i == itemCount) spiralLastNode = sphere;
             }
 
             bezPath = new GameObject("BezierPath");
@@ -55,6 +52,13 @@ namespace GalaxyExplorer
         {
             if (index <= spiralContainer.transform.childCount)
                 return spiralContainer.transform.GetChild(index);
+            else return null;
+        }
+
+        public Transform GetPathNode(int index)
+        {
+            if (index <= bezPath.transform.childCount)
+                return bezPath.transform.GetChild(index);
             else return null;
         }
     }
