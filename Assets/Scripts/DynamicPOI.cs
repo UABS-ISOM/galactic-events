@@ -11,7 +11,6 @@ namespace GalaxyExplorer
 
         private Queue<Action> initPlot = new Queue<Action>();
         private List<POITracker> points = new List<POITracker>();
-        private List<GameObject> nodes = new List<GameObject>();
 
         private PlotPatternSpiralPath pattern;
 
@@ -36,31 +35,24 @@ namespace GalaxyExplorer
 
 
                     //
-                    Exhibit ex = exList[0];
                     initPlot.Enqueue(() => PlotPOI(
-                        i, // i++
+                        i++,
                         exList[0].id,
                         exList[0].title,
                         null,
-                        pattern.GetSpiralNode(i), // i - 1
-                        pattern.GetSpiralNode(i + 1))); // i
-                    //
+                        pattern.GetSpiralNode(i - 1),
+                        pattern.GetSpiralNode(i)));
 
-
-                    // TEMPORARY: use a single exhibit for demo
                     //exList.ForEach((Exhibit ex) =>
                     //{
-                    //    initPlot.Enqueue(() => PlotPOI(ex.id, ex.title, null, pattern.GetSpiralNode(i++)));
-
-                    //    //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-                    //    //obj.name = ex.id;
-                    //    //obj.transform.SetParent(parent);
-                    //    //obj.transform.localScale = new Vector3(.04f, .04f, .04f);
-
-                    //    //obj.transform.position = transform.position;
-                    //    //obj.transform.Translate(pattern.GetPoint(), parent.transform);
-
+                    //    // initPlot.Enqueue(() => PlotPOI(ex.id, ex.title, null, pattern.GetSpiralNode(i++)));
+                    //    initPlot.Enqueue(() => PlotPOI(
+                    //        i++,
+                    //        ex.id,
+                    //        ex.title,
+                    //        null,
+                    //        pattern.GetSpiralNode(i - 1),
+                    //        pattern.GetSpiralNode(i)));
                     //    // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
                     //});
                 }));
@@ -78,7 +70,7 @@ namespace GalaxyExplorer
                 tracker.gameObject.transform.SetParent(pattern.bezPath.transform);
                 
                 tracker.target = pattern.GetPathNode(0);
-                tracker.next = () => pattern.GetPathNode(1);
+                tracker.next = (int i) => pattern.GetPathNode(i);
             }
 
             return tracker;
@@ -105,17 +97,19 @@ namespace GalaxyExplorer
                     Vector3 oldPos = points[i].gameObject.transform.position;
 
                     points[i] = Move(points[i]);
-                    
+
                     if (oldPos == points[i].gameObject.transform.position)
                     {
                         // poi has reached target, switch to next node and MOVE AGAIN HERE
-                        Transform target = points[i].next();
+                        Transform target = points[i].next(++points[i].targetIndex);
                         if (target == null) // no more nodes, jump to next rail
                         {
                             points[i] = Jump(points[i]);
-                        } else
+                        }
+                        else
                         {
-                            points[i].next();
+                            points[i].gameObject.transform.SetParent(points[i].target);
+                            points[i].target = target;
                         }
 
                         points[i] = Move(points[i]);
@@ -144,7 +138,7 @@ namespace GalaxyExplorer
                 targetIndex = index + 1,
                 target = targetNode,
                 gameObject = poi,
-                next = () => pattern.GetSpiralNode(index + 1)
+                next = (int i) => pattern.GetSpiralNode(i)
             }); // POI's in motion
         }
 
@@ -155,7 +149,7 @@ namespace GalaxyExplorer
             public Transform target { get; set; }
             public int targetIndex { get; set; }
             public GameObject gameObject { get; set; }
-            public Func<Transform> next { get; set; }
+            public Func<int, Transform> next { get; set; }
         }
     }
 }
