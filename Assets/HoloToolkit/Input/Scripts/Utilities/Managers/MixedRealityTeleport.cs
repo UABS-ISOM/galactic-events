@@ -158,8 +158,8 @@ namespace HoloToolkit.Unity.InputModule
 
             if (EnableStrafe && currentPointingSource == null && !fadeControl.Busy)
             {
-                float leftX = Input.GetAxis(useCustomMapping ? LeftThumbstickX : XboxControllerMapping.GetMapping(HorizontalStrafe));
-                float leftY = Input.GetAxis(useCustomMapping ? LeftThumbstickY : XboxControllerMapping.GetMapping(ForwardMovement));
+                float leftX = Input.GetAxis(useCustomMapping ? LeftThumbstickX : "CONTROLLER_LEFT_STICK_HORIZONTAL");
+                float leftY = Input.GetAxis(useCustomMapping ? LeftThumbstickY : "CONTROLLER_LEFT_STICK_VERTICAL");
 
                 if (leftX < -0.8 && Math.Abs(leftY) < 0.3)
                 {
@@ -177,8 +177,8 @@ namespace HoloToolkit.Unity.InputModule
 
             if (EnableRotation && currentPointingSource == null && !fadeControl.Busy)
             {
-                float rightX = Input.GetAxis(useCustomMapping ? RightThumbstickX : XboxControllerMapping.GetMapping(HorizontalRotation));
-                float rightY = Input.GetAxis(useCustomMapping ? RightThumbstickY : XboxControllerMapping.GetMapping(VerticalRotation));
+                float rightX = Input.GetAxis(useCustomMapping ? RightThumbstickX : "CONTROLLER_RIGHT_STICK_HORIZONTAL");
+                float rightY = Input.GetAxis(useCustomMapping ? RightThumbstickY : "CONTROLLER_RIGHT_STICK_VERTICAL");
 
                 if (rightX < -0.8 && Math.Abs(rightY) < 0.3)
                 {

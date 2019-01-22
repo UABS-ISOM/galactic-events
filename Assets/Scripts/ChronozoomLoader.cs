@@ -10,30 +10,28 @@ using UnityEngine.UI;
 namespace GalaxyExplorer
 {
     //This script is attached to Content in ChronozoomView scene. It is responsible for loading the chronozoom data from chronozoom.com
-    public class ChronozoomLoader : MonoBehaviour
+    public class ChronozoomLoader
     {
-        public GameObject panelBox;
-        public GameObject detailsCanvas;
+        public string SuperCollection;
 
         private const string ChronozoomURI = "http://www.chronozoom.com/api/gettimelines?supercollection=";
-        private string SuperCollection = ChronozoomCollectionChoice.UserChosenSuperCollection;
-        private List<Exhibit> exhibitList;
+        private List<Exhibit> exhibitList = new List<Exhibit>();
         private bool onlyPictures = true;
 
         //Change this to limit the number of exhibits that are instantiated. Set limit to around 100 to prevent text overload
         private int maxExhibits = 100;
 
-        void Awake()
-        {
-            //Called on scene load
-            if (SuperCollection == null || SuperCollection.Equals(""))
-            {
-                SuperCollection = "cosmos";
-            }
-            StartCoroutine(GetChronozoomData());
-        }
+        //void Awake()
+        //{
+        //    //Called on scene load
+        //    if (SuperCollection == null || SuperCollection.Equals(""))
+        //    {
+        //        SuperCollection = "cosmos";
+        //    }
+        //    StartCoroutine(GetChronozoomData());
+        //}
 
-        IEnumerator GetChronozoomData()
+        public IEnumerator GetChronozoomData(Action<List<Exhibit>> callback)
         {
             Debug.Log("Getting Chronozoom Data");
             UnityWebRequest www = UnityWebRequest.Get(ChronozoomURI + SuperCollection);
@@ -50,28 +48,28 @@ namespace GalaxyExplorer
             {
                 Debug.Log("Retrieved Chronozoom Data For " + SuperCollection);
                 yield return new WaitForSeconds(2);
-                DeserializeData(www.downloadHandler.text);
+                DeserializeData(www.downloadHandler.text, callback);
             }
         }
 
-        void DeserializeData(string data)
+        void DeserializeData(string data, Action<List<Exhibit>> callback)
         {
             //Convert json into Timeline objects
             Timeline timeline = new Timeline();
             timeline = JsonConvert.DeserializeObject<Timeline>(data);
-            DisplayData(timeline);
+            CleanData(timeline, callback);
         }
 
-        void DisplayData(Timeline timeline)
+        void CleanData(Timeline timeline, Action<List<Exhibit>> callback)
         {
-            float xOffSet = 0.0533f;
-            float xPosition = 0f;
-            int exhibitCount = 0;
+            //float xOffSet = 0.0533f;
+            //float xPosition = 0f;
+            //int exhibitCount = 0;
 
-            var panelBoxGroup = new GameObject();
-            panelBoxGroup.transform.parent = GameObject.Find("ChronozoomContent").transform;
-            panelBoxGroup.transform.localPosition = Vector3.zero;
-            panelBoxGroup.transform.rotation = Quaternion.identity;
+            //var panelBoxGroup = new GameObject();
+            //panelBoxGroup.transform.parent = GameObject.Find("ChronozoomContent").transform;
+            //panelBoxGroup.transform.localPosition = Vector3.zero;
+            //panelBoxGroup.transform.rotation = Quaternion.identity;
 
             //Retrieve all exhibits from subtimelines
             GetExhibitList(timeline);
@@ -79,56 +77,56 @@ namespace GalaxyExplorer
             //Sort the exhibits in order of year
             SortExhibit();
 
-            foreach (Exhibit exhibit in exhibitList)
-            {
-                //Limit number of exhibits by the value speficied in maxExhibit
-                if(exhibitCount >= maxExhibits)
-                {
-                    break;
-                }
-                exhibitCount++;
+            callback(exhibitList); // come back to the caller with the data
 
-                //Instantiate the panel box for displaying information
-                GameObject panelBoxGameObject = Instantiate(panelBox);
+            //foreach (Exhibit exhibit in exhibitList)
+            //{
+            //    //Limit number of exhibits by the value speficied in maxExhibit
+            //    if(exhibitCount >= maxExhibits)
+            //    {
+            //        break;
+            //    }
+            //    exhibitCount++;
 
-                panelBoxGameObject.transform.parent = panelBoxGroup.transform;
-                Vector3 currentPosition = panelBoxGameObject.transform.position;
-                panelBoxGameObject.transform.localPosition = new Vector3(currentPosition.x + xPosition, currentPosition.y, currentPosition.z);
+            //    //Instantiate the panel box for displaying information
+            //    GameObject panelBoxGameObject = Instantiate(panelBox);
 
-                //Finds the heading text inside the box and change the title with chronozoom data
-                GameObject headingText = panelBoxGameObject.transform.Find("Canvas/Heading").gameObject;
-                headingText.GetComponent<Text>().text = exhibit.title;
+            //    panelBoxGameObject.transform.parent = panelBoxGroup.transform;
+            //    Vector3 currentPosition = panelBoxGameObject.transform.position;
+            //    panelBoxGameObject.transform.localPosition = new Vector3(currentPosition.x + xPosition, currentPosition.y, currentPosition.z);
 
-                //Finds the content text inside the box and change the content with chronozoom data
-                GameObject yearText = panelBoxGameObject.transform.Find("Canvas/Year").gameObject;
-                yearText.GetComponent<Text>().text = String.Format("{0:0,0}", exhibit.time);
+            //    //Finds the heading text inside the box and change the title with chronozoom data
+            //    GameObject headingText = panelBoxGameObject.transform.Find("Canvas/Heading").gameObject;
+            //    headingText.GetComponent<Text>().text = exhibit.title;
 
-                //Finds the collection text inside the box and change the content with chronozoom data
-                GameObject collectionText = panelBoxGameObject.transform.Find("Canvas/Collection").gameObject;
-                collectionText.GetComponent<Text>().text = timeline.Regime;
+            //    //Finds the content text inside the box and change the content with chronozoom data
+            //    GameObject yearText = panelBoxGameObject.transform.Find("Canvas/Year").gameObject;
+            //    yearText.GetComponent<Text>().text = String.Format("{0:0,0}", exhibit.time);
 
-                //Store exhibits for that panel
-                ChronozoomDetailsManager detailsManager = panelBoxGameObject.transform.GetComponent<ChronozoomDetailsManager>();
-                detailsManager.contentItems = exhibit.contentItems;
-                detailsManager.Initiate();
+            //    //Finds the collection text inside the box and change the content with chronozoom data
+            //    GameObject collectionText = panelBoxGameObject.transform.Find("Canvas/Collection").gameObject;
+            //    collectionText.GetComponent<Text>().text = timeline.Regime;
 
-                //Move position for next box to the right
-                xPosition = xOffSet + xPosition;
+            //    //Store exhibits for that panel
+            //    ChronozoomDetailsManager detailsManager = panelBoxGameObject.transform.GetComponent<ChronozoomDetailsManager>();
+            //    detailsManager.contentItems = exhibit.contentItems;
+            //    detailsManager.Initiate();
+
+            //    //Move position for next box to the right
+            //    xPosition = xOffSet + xPosition;
 
 
-            }
+            //}
 
-            //Makes sure the position, rotation and scale stays constant on each load
-            var positionCube = GameObject.Find("ChronozoomPositionCube").transform;
-            panelBoxGroup.transform.SetPositionAndRotation(positionCube.position, positionCube.rotation);
-            panelBoxGroup.transform.localScale = new Vector3(1, 1, 1);
+            ////Makes sure the position, rotation and scale stays constant on each load
+            //var positionCube = GameObject.Find("ChronozoomPositionCube").transform;
+            //panelBoxGroup.transform.SetPositionAndRotation(positionCube.position, positionCube.rotation);
+            //panelBoxGroup.transform.localScale = new Vector3(1, 1, 1);
 
         }
 
         private void GetExhibitList(Timeline timeline)
         {
-            exhibitList = new List<Exhibit>();
-
             //Recursively go through all the subtimelines
             GetSubTimelinesInTimeline(timeline);
 

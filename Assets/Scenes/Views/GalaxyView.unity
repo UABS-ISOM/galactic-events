@@ -156,6 +156,10 @@ Prefab:
       propertyPath: CardAnimator
       value: 
       objectReference: {fileID: 1890879751}
+    - target: {fileID: 179120, guid: 24ff85ba2c7c64e42b23adc74faf3aa6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24ff85ba2c7c64e42b23adc74faf3aa6, type: 2}
   m_IsPrefabAsset: 0
@@ -281,6 +285,10 @@ Prefab:
       propertyPath: CardAnimator
       value: 
       objectReference: {fileID: 203131664}
+    - target: {fileID: 168448, guid: 848ab73f5b4980348832008b60a85a5a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 848ab73f5b4980348832008b60a85a5a, type: 2}
   m_IsPrefabAsset: 0
@@ -371,7 +379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411438, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.99999994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 411438, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
       propertyPath: m_LocalScale.z
@@ -400,6 +408,10 @@ Prefab:
     - target: {fileID: 131832, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
       propertyPath: m_Name
       value: Chronozoom_Card
+      objectReference: {fileID: 0}
+    - target: {fileID: 143324, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
@@ -458,6 +470,10 @@ Prefab:
       propertyPath: CardAnimator
       value: 
       objectReference: {fileID: 1873957587}
+    - target: {fileID: 178590, guid: 73b8f8966f5a07d41b81a2b392c754c9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b8f8966f5a07d41b81a2b392c754c9, type: 2}
   m_IsPrefabAsset: 0
@@ -617,6 +633,10 @@ Prefab:
     - target: {fileID: 411438, guid: ae26bf408db9f9b4091c2c35f434505d, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 143324, guid: ae26bf408db9f9b4091c2c35f434505d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae26bf408db9f9b4091c2c35f434505d, type: 2}
@@ -903,6 +923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1296047784}
+  - component: {fileID: 1296047785}
   m_Layer: 0
   m_Name: HeroView
   m_TagString: Untagged
@@ -927,6 +948,17 @@ Transform:
   m_Father: {fileID: 204878880}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1296047785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296047783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c0273c3a8b104a9cef1e727d36ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1379719062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 419008, guid: 73b8f8966f5a07d41b81a2b392c754c9,
@@ -975,6 +1007,10 @@ Prefab:
       propertyPath: CardAnimator
       value: 
       objectReference: {fileID: 511283289}
+    - target: {fileID: 121752, guid: 919e4c9ad83efda44adba921b49c7ffa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 919e4c9ad83efda44adba921b49c7ffa, type: 2}
   m_IsPrefabAsset: 0
@@ -1248,6 +1284,10 @@ Prefab:
       propertyPath: CardAnimator
       value: 
       objectReference: {fileID: 588550189}
+    - target: {fileID: 104622, guid: 4f26b92d8d5712d4db1381c636fc91a5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f26b92d8d5712d4db1381c636fc91a5, type: 2}
   m_IsPrefabAsset: 0
@@ -1420,6 +1460,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411438, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143324, guid: fdb334f3709266145a4fb6faf0e2f03b, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

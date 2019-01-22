@@ -122,7 +122,7 @@ Material:
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
-    - _TransitionAlpha: 0
+    - _TransitionAlpha: 1
     - _UVSec: 0
     - _UplightContribution: 1
     - _UseUIAlphaClip: 0
