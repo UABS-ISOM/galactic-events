@@ -24,9 +24,10 @@ namespace GalaxyExplorer
                     PlotPatternSpiralPath pattern = hero.GetComponent<PlotPatternSpiralPath>();
                     pattern.Setup(exList.Count);
 
-                    //exList.ForEach((Exhibit ex) =>
-                    //{
-                        //PlotPOI(ex.id, ex.title, null, pattern.GetPoint(), parent);
+                    int i = 0;
+                    exList.ForEach((Exhibit ex) =>
+                    {
+                        PlotPOI(ex.id, ex.title, null, pattern.GetSpiralNode(i++));
 
                         //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
@@ -38,22 +39,22 @@ namespace GalaxyExplorer
                         //obj.transform.Translate(pattern.GetPoint(), parent.transform);
 
                         // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
-                    //});
+                    });
                 }));
             }
         }
 
         // plot a point of interest programmatically
-        void PlotPOI(string name, string cardText, string transitionScene, Vector3 position, Transform parent)
+        void PlotPOI(string name, string cardText, string transitionScene, Transform node)
         {
             // setup structure
             GameObject poi = (GameObject)Instantiate(
                 Resources.Load("Prefabs/POI", typeof(GameObject)),
-                transform.position, Quaternion.identity,
-                parent);
+                node.position, Quaternion.identity,
+                node);
 
             poi.name = name;
-            poi.transform.Translate(position, parent.transform);
+            //poi.transform.Translate(position, parent.transform);
 
             poi.transform.Find("ScaleWithDistance target/POI").gameObject.GetComponent<PointOfInterest>().TransitionScene = transitionScene;
             poi.transform.Find("ScaleWithDistance target/POI/ScaleWithDistance target/FaceCamera/Card").gameObject.GetComponent<TextMesh>().text = cardText;
