@@ -40,7 +40,8 @@ namespace GalaxyExplorer
         {
             if (this.mode != mode)
             {
-                data[this.mode]["year"] = 0f; // clear the year counter for this
+                if (this.mode != TimeMode.Stop)
+                    data[this.mode]["year"] = 0f; // clear the year counter
                 this.mode = mode;
             }
         }
