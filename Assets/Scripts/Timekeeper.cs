@@ -28,11 +28,6 @@ namespace GalaxyExplorer
             if (mode == TimeMode.Galaxy)
             {
                 data[mode]["year"] += Time.deltaTime / data[mode]["rate"];
-
-                if ((int)data[mode]["year"] >= 225000000)
-                {
-                    mode = TimeMode.Stop;
-                }
             }
         }
 
