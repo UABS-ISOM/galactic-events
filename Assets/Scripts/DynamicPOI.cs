@@ -55,6 +55,9 @@ namespace GalaxyExplorer
                     //        pattern.GetSpiralNode(i)));
                     //    // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
                     //});
+
+                    // start tracking years after the CZ data has loaded (then start plotting per year)
+                    GameObject.Find("/ViewLoader").GetComponent<Timekeeper>().SwitchMode(TimeMode.Galaxy);
                 }));
             }
         }
