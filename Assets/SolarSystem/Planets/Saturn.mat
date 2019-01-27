@@ -113,14 +113,14 @@ Material:
     - _EmissiveMultiplier: 1
     - _FOG: 0
     - _Glossiness: 0.5
-    - _InnerRingRadius: 0.017500006
+    - _InnerRingRadius: 0.017500013
     - _LightProbeAmount: 1
     - _Metallic: 0
     - _Mode: 0
     - _NormalAlphaAsEmissive: 0
     - _NormalAlphaAsSpecular: 0
     - _OcclusionStrength: 1
-    - _OuterRingRadius: 0.02500001
+    - _OuterRingRadius: 0.025000019
     - _Parallax: 0.02
     - _SRCBLEND: 5
     - _ShowDebugValue: 0
