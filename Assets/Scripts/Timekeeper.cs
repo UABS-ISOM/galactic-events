@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ namespace GalaxyExplorer
 
     public class Timekeeper : MonoBehaviour
     {
+        public List<Action<float>> updateActions = new List<Action<float>>();
         public Dictionary<TimeMode, Dictionary<string, float>> data =
             new Dictionary<TimeMode, Dictionary<string, float>>()
             {
@@ -27,7 +29,13 @@ namespace GalaxyExplorer
         {
             if (mode == TimeMode.Galaxy)
             {
-                data[mode]["year"] += Time.deltaTime / data[mode]["rate"];
+                float year = Time.deltaTime / data[mode]["rate"];
+                if (year != data[mode]["year"])
+                {
+                    data[mode]["year"] += year;
+                    foreach (Action<float> action in updateActions)
+                        action(data[mode]["year"]); // execute any action callbacks
+                }
             }
         }
 
