@@ -15,6 +15,8 @@ namespace GalaxyExplorer
 
         private PlotPatternSpiralPath pattern;
 
+        private float wait = 0;
+
         public void PlotItems(string context)
         {
             if (context == "GalaxyView")
@@ -43,7 +45,6 @@ namespace GalaxyExplorer
                     timekeeper.updateActions.Add(year =>
                     {
                         float timediff = year - now;
-                        Debug.Log(timediff);
                         List<Exhibit> toPlot = exList.FindAll(ex => ex.time <= timediff);
 
                         if (toPlot.Count > 0)
@@ -94,7 +95,14 @@ namespace GalaxyExplorer
 
         void Update()
         {
-            if (initPlot.Count > 0) initPlot.Dequeue()(); // plot once per update
+            wait += Time.deltaTime;
+            if (wait >= 1)
+            {
+                wait %= 1;
+                if (initPlot.Count > 0) initPlot.Dequeue()();
+                // plot once per second, so items have some distance apart - sacrifices exact timing
+            }
+            
             if (points.Count > 0) // move the points along
             {
                 for (int i = 0; i < points.Count; i++)
