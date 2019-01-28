@@ -8,6 +8,7 @@ namespace GalaxyExplorer
     public class DynamicPOI : MonoBehaviour
     {
         public float poiSpeed = 0.1f; // base speed of the POI movement
+        public float now = 13800000000;
 
         private Queue<Action> initPlot = new Queue<Action>();
         private List<POITracker> points = new List<POITracker>();
@@ -31,33 +32,35 @@ namespace GalaxyExplorer
                     pattern = hero.GetComponent<PlotPatternSpiralPath>();
                     pattern.Setup(exList.Count);
 
+                    Timekeeper timekeeper = GameObject.Find("/ViewLoader").GetComponent<Timekeeper>();
+
                     int i = 0;
 
-
-                    //
-                    initPlot.Enqueue(() => PlotPOI(
-                        i++,
-                        exList[0].id,
-                        exList[0].title,
-                        null,
-                        pattern.GetSpiralNode(i - 1),
-                        pattern.GetSpiralNode(i)));
-
-                    //exList.ForEach((Exhibit ex) =>
-                    //{
-                    //    // initPlot.Enqueue(() => PlotPOI(ex.id, ex.title, null, pattern.GetSpiralNode(i++)));
-                    //    initPlot.Enqueue(() => PlotPOI(
-                    //        i++,
-                    //        ex.id,
-                    //        ex.title,
-                    //        null,
-                    //        pattern.GetSpiralNode(i - 1),
-                    //        pattern.GetSpiralNode(i)));
-                    //    // example: PlotPOI("test", "SOMETHING!", "ChronozoomMenuView", new Vector3(0, 0, 0));
-                    //});
-
                     // start tracking years after the CZ data has loaded (then start plotting per year)
-                    GameObject.Find("/ViewLoader").GetComponent<Timekeeper>().SwitchMode(TimeMode.Galaxy);
+                    timekeeper.SwitchMode(TimeMode.Galaxy);
+
+                    // setup the timed POI spawning based on the timekeeper
+                    timekeeper.updateActions.Add(year =>
+                    {
+                        float timediff = year - now;
+                        Debug.Log(timediff);
+                        List<Exhibit> toPlot = exList.FindAll(ex => ex.time <= timediff);
+
+                        if (toPlot.Count > 0)
+                        {
+                            toPlot.ForEach((Exhibit ex) =>
+                            {
+                                exList.Remove(ex);
+                                initPlot.Enqueue(() => PlotPOI(
+                                    i++,
+                                    ex.id,
+                                    ex.title,
+                                    null,
+                                    pattern.GetSpiralNode(i -1),
+                                    pattern.GetSpiralNode(i)));
+                            });
+                        }
+                    });
                 }));
             }
         }

@@ -14,7 +14,7 @@ namespace GalaxyExplorer
             GameObject.Find("/ViewLoader").GetComponent<Timekeeper>()
                 .updateActions.Add(year =>
                 {
-                    tooltip.text = string.Format("Year: {0}",
+                    tooltip.text = string.Format("{0} years",
                         year.ToString("N0", CultureInfo.InvariantCulture));
                 });
         }
