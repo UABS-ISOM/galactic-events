@@ -7,7 +7,7 @@ namespace GalaxyExplorer
 {
     public class DynamicPOI : MonoBehaviour
     {
-        public float poiSpeed = 0.1f;
+        public float poiSpeed = 0.1f; // base speed of the POI movement
 
         private Queue<Action> initPlot = new Queue<Action>();
         private List<POITracker> points = new List<POITracker>();
@@ -82,7 +82,7 @@ namespace GalaxyExplorer
         // move the POI towards the next node
         POITracker Move (POITracker tracker)
         {
-            float step = poiSpeed * Time.deltaTime;
+            float step = (poiSpeed * Time.deltaTime) * GalaticController.instance.speedMultiplier;
             tracker.gameObject.transform.position =
                 Vector3.MoveTowards(tracker.gameObject.transform.position, tracker.target.position, step);
 
