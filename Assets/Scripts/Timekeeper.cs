@@ -29,7 +29,10 @@ namespace GalaxyExplorer
         {
             if (mode == TimeMode.Galaxy)
             {
-                float year = Time.deltaTime / data[mode]["rate"];
+                if (GalaticController.instance.speedMultiplier == 0) mode = TimeMode.Stop;
+                else mode = TimeMode.Galaxy;
+
+                float year = (Time.deltaTime * GalaticController.instance.speedMultiplier) / data[mode]["rate"];
                 if (year != data[mode]["year"])
                 {
                     data[mode]["year"] += year;
