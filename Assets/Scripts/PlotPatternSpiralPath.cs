@@ -29,7 +29,7 @@ namespace GalaxyExplorer
                 //GameObject sphere = new GameObject(string.Format("Node {0}", i));
                 GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sphere.transform.SetParent(spiralPath.transform);
-                sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
+                sphere.transform.localScale = new Vector3(.005f, .005f, .005f);
                 sphere.transform.localPosition = spiralPattern.GetPoint();
             }
 
@@ -48,8 +48,9 @@ namespace GalaxyExplorer
             for (int i = 0; i < pathResolution; i++)
             {
                 GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                //GameObject sphere = new GameObject(string.Format("Node {0}", i));
                 sphere.transform.SetParent(bezPath.transform);
-                sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
+                sphere.transform.localScale = new Vector3(.005f, .005f, .005f);
                 sphere.transform.position = curve.GetPoint(i / pathResolution);
             }
         }
