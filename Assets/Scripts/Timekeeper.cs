@@ -19,7 +19,7 @@ namespace GalaxyExplorer
             {
                 { TimeMode.Galaxy, new Dictionary<string, float>() {
                     { "rate", .000000355f }, // one year in game time seconds
-                    { "year", 0f }
+                    { "year", 9240000000f } // start at galaxy formation
                 } }
             };
 
@@ -52,7 +52,7 @@ namespace GalaxyExplorer
             if (this.mode != mode)
             {
                 if (this.mode != TimeMode.Stop)
-                    data[this.mode]["year"] = 0f; // clear the year counter
+                    data[this.mode]["year"] = 9240000000f; // clear the year counter
                 this.mode = mode;
             }
         }

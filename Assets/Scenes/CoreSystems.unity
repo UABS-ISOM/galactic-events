@@ -1674,7 +1674,7 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 720700953}
-  m_Text: 'Year: 0'
+  m_Text: 9,240,000,000 years
   m_OffsetZ: 0
   m_CharacterSize: 0.003
   m_LineSpacing: 1

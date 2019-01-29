@@ -19,7 +19,7 @@ namespace GalaxyExplorer
         private bool onlyPictures = true;
 
         //Change this to limit the number of exhibits that are instantiated. Set limit to around 100 to prevent text overload
-        private int maxExhibits = 100;
+        //private int maxExhibits = 100;
 
         //void Awake()
         //{
